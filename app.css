@@ -1,0 +1,98 @@
+body{
+    font-family: "Nunito", sans-serif;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    width: 95%;
+    margin: auto;
+}
+
+
+
+
+#divCategories div{
+    width: 250px;
+    height: 250px;
+    color: white;
+  background-image: radial-gradient(circle at center, black, #bf1f2e );
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#divCategories div:hover{
+    background-color: red;
+    transform: translateY(0.5em) translateX(00.5em);
+}
+
+
+#navLinks a{
+    font-size: medium;
+    font-weight: bold;
+    color: black
+}
+#navLinks a:hover{
+        color: #ff8800;
+        transition: background-color 1s;
+        display: inline-block;
+        transform: translateX(0.1em) translateY(-0.1em)
+}
+#pokedex{
+    display: flex;
+    justify-content: center;
+}
+#pokedex div{
+    border-radius: 20px;
+}
+
+.card-img-top{
+    max-height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+.pokemonType{
+    list-style-type: none;
+    padding: 3px 10px;
+    border: 1px solid;
+    font-family: sans-serif;
+    max-width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2px 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#normal{
+    background-color: rgb(202, 202, 202);
+}#grass{
+    background-color: #a7c957;
+}#fire{
+    background-color: #e85d04;
+}#water{
+    background-color: #00509d;
+}#bug{
+    background-color: #b5e48c;
+}#electric{
+    background-color: #ffd500;
+}#rock{
+    background-color: #b08968;
+}#ghost{
+    background-color: #7b2cbf;
+}#poison{
+    background-color: #c77dff;
+}#psychic{
+    background-color: #ff8fab;
+}#fighting{
+    background-color: #ae2012;
+}#ground{
+    background-color: #bb9457;
+}#dargon{
+    background-color: #f9844a;
+}#reset{
+    background-color: #000814;
+}

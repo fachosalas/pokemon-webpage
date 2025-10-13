@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light py-0 mx-auto" id="navPrincipal">
+        <div>
+            <img src="img/pokemon-logo.jpeg" alt="" class="img-fluid w-50">
+        </div>
+        <div class="navbar-nav d-inline" id="navLinks">
+            <a href="homepage.html" class="nav-item">Home</a>
+            <a href="pokedex.html" class="nav-item mx-5">Pokedex</a>
+            <a href="categories.html" class="nav-item">Categories</a>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-sontrol mr-sm-2" type="search" placeholder="Search" name="search" id="search">
+            <button class="btn btn-sm btn-outline-dark" type="submit">Search</button>
+        </form>
+    </nav>
+    <section class="container-fluid p-0 m-0" id="sectionBanner">
+        <img src="img/pokemon.jpg" alt="" class="img-fluid w-100">
+    </section>
+
+
+    <section class="container-fluid px-0 mx-0" id="mainSection">
+        <div class="bg-dark px-0 py-5 d-flex flex-column justify-content-center align-items-center">
+            <input type="search" class="form-sontrol p-1" placeholder="Search pokemon" name="searchPokemon"
+                id="searchPokemon">
+            <p class="text-white">Use this input to search any pokemon. In an instant</p>
+        </div>
+        <div class="row pt-3 px-5">
+            <div class="col-9">
+                <p>Filter by type:</p>
+                <div class="d-flex flex-wrap">
+                    <div class="pokemonType" id="normal">Normal</div>
+                    <div class="pokemonType" id="grass">Grass</div>
+                    <div class="pokemonType" id="fire">Fire</div>
+                    <div class="pokemonType" id="water">Water</div>
+                    <div class="pokemonType" id="bug">Bug</div>
+                    <div class="pokemonType" id="electric">Electric</div>
+                    <div class="pokemonType" id="rock">Rock</div>
+                    <div class="pokemonType" id="ghost">Ghost</div>
+                    <div class="pokemonType" id="poison">Poison</div>
+                    <div class="pokemonType" id="psychic">Psychic</div>
+                    <div class="pokemonType" id="fighting">Fighting</div>
+                    <div class="pokemonType" id="ground">Ground</div>
+                    <div class="pokemonType" id="dargon">Dragon</div>
+                    <div class="pokemonType" id="reset">Reset</div>
+                </div>
+            </div>
+            <div class="form-group col-3">
+                <select id="inputState" class="form-control bg-dark text-white">
+                    <option value="" selected>ID asc</option>
+                    <option value="" selected>ID dec</option>
+                    <option value="" selected>Alph asc</option>
+                    <option value="" selected>Alph dec</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-wrap pt-3" id="pokedex">
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/bulbasaur.jpg" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Bulbasaur</h5>
+                    <p class="pokemonNumber">#001</p>
+                    <div class="pokemonType" id="grass">Grass</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/ivysaur.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Ivisaur</h5>
+                    <p class="pokemonNumber">#002</p>
+                    <div class="pokemonType" id="grass">Grass</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/vensaur.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Venasaur</h5>
+                    <p class="pokemonNumber">#003</p>
+                    <div class="pokemonType" id="grass">Grass</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/charmander.jpg" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Charmander</h5>
+                    <p class="pokemonNumber">#004</p>
+                    <div class="pokemonType" id="fire">Fire</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/charmeleon.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Charmeleon</h5>
+                    <p class="pokemonNumber">#005</p>
+                    <div class="pokemonType" id="fire">Fire</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/charizard.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Charizard</h5>
+                    <p class="pokemonNumber">#006</p>
+                    <div class="pokemonType" id="fire">Fire</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/squirtle.jpg" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Squirtle</h5>
+                    <p class="pokemonNumber">#007</p>
+                    <div class="pokemonType" id="water">Water</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/wartortle.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Wartortle</h5>
+                    <p class="pokemonNumber">#008</p>
+                    <div class="pokemonType" id="water">Water</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/blastoise.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Blastoise</h5>
+                    <p class="pokemonNumber">#009</p>
+                    <div class="pokemonType" id="water">Water</div>
+                </div>
+            </div>
+            <div class="card mx-3 border-dark my-2">
+                <img src="img/pikachu.png" alt="" class="card-img-top border-bottom">
+                <div class="card-body">
+                    <h5 class="card-title">Pikachu</h5>
+                    <p class="pokemonNumber">#025</p>
+                    <div class="pokemonType" id="electric">Electric</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mx-auto mt-4 pt-2 border-top border-dark">
+            &copy; Fabricio's Productions
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
