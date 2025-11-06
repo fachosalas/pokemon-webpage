@@ -67,32 +67,36 @@ body{
     font-weight: 500;
 }
 
-#normal{
+.normal{
     background-color: rgb(202, 202, 202);
-}#grass{
+}.grass{
     background-color: #a7c957;
-}#fire{
+}.fire{
     background-color: #e85d04;
-}#water{
+}.water{
     background-color: #00509d;
-}#bug{
+}.bug{
     background-color: #b5e48c;
-}#electric{
+}.electric{
     background-color: #ffd500;
-}#rock{
+}.rock{
     background-color: #b08968;
-}#ghost{
+}.ghost{
     background-color: #7b2cbf;
-}#poison{
+}.poison{
     background-color: #c77dff;
-}#psychic{
+}.psychic{
     background-color: #ff8fab;
-}#fighting{
+}.fighting{
     background-color: #ae2012;
-}#ground{
+}.ground{
     background-color: #bb9457;
-}#dargon{
+}.dragon{
     background-color: #f9844a;
-}#reset{
+}.reset{
     background-color: #000814;
+}.ice{
+    background-color: #5391cb;
+}.fairy{
+    background-color: #cb53b3;
 }
