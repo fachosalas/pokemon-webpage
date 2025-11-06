@@ -39,44 +39,55 @@ const kantoPokedexByType = {
 };
 const pokedex = document.getElementById("pokedex");
 
-//kantoPokedexNames.length
-for (let i = 1; i <= kantoPokedexNames.length; i++) {
+let kantoPokemons =[]
+
+for (let i =1; i<=kantoPokedexNames.length; i++){
+    const newPokemon = {
+        id: i,
+        pokemonImageURL : `${baseURL}${i}.png`,
+        pokemonName : kantoPokedexNames[i - 1],
+        pokemonType : pokemonTypeCheck(kantoPokedexNames[i - 1])
+    }
+    kantoPokemons.push(newPokemon);
+}
+
+for (let i = 0; i < kantoPokemons.length; i++){
     const cardDiv = document.createElement('div');
     cardDiv.classList.add('card');
     cardDiv.classList.add('mx-3');
     cardDiv.classList.add('border-dark');
     cardDiv.classList.add('my-2');
 
-    const newImg = document.createElement('img');
-    newImg.src = `${baseURL}${i}.png`;
-    newImg.classList.add('card-img-top');
-    newImg.classList.add('border-bottom');
+    const newImage = document.createElement('img');
+    newImage.classList.add('card-img-top');
+    newImage.classList.add('border-bottom');
+    newImage.src = `${kantoPokemons[i].pokemonImageURL}`
 
-    const bodyDiv = document.createElement('div');
-    bodyDiv.classList.add('card-body');
+    const cardBody = document.createElement('div');
+    cardBody.classList.add('card-body');
 
     const pokemonName = document.createElement('h5');
     pokemonName.classList.add('card-title');
-    pokemonName.innerText = kantoPokedexNames[i - 1];
-    bodyDiv.appendChild(pokemonName);
+    pokemonName.innerText = kantoPokemons[i].pokemonName;
 
     const pokemonNumber = document.createElement('p');
     pokemonNumber.classList.add('pokemonNumber');
-    pokemonNumber.innerText = `# ${i}`;
-    bodyDiv.appendChild(pokemonNumber);
+    pokemonNumber.innerText = `#${kantoPokemons[i].id}` ;
 
-    const pokemonType =pokemonTypeCheck(pokemonName.innerText);
-
+    const pokemonType = pokemonTypeCheck(pokemonName.innerText);
     const pokemonTypeDisplay = document.createElement('div');
     pokemonTypeDisplay.classList.add('pokemonType');
     pokemonTypeDisplay.classList.add(`${pokemonType.toLowerCase()}`);
     pokemonTypeDisplay.innerText = `${pokemonType}`;
-    bodyDiv.appendChild(pokemonTypeDisplay);
 
-    cardDiv.append(newImg);
-    cardDiv.append(bodyDiv);
+    cardBody.appendChild(pokemonName);
+    cardBody.appendChild(pokemonNumber);
+    cardBody.appendChild(pokemonTypeDisplay);
+    cardDiv.append(newImage);
+    cardDiv.append(cardBody);
     pokedex.append(cardDiv);
 }
+
 
 function pokemonTypeCheck(name) {
     for (const pokemonType in kantoPokedexByType) {
@@ -87,10 +98,18 @@ function pokemonTypeCheck(name) {
         }
     }
 }
-// document.getElementById('normal').onclick = function(){
-//     filterByType('normal');
-// }
-// function filterByType(pokemonType){
-//     console.log(pokemonType.innerText)
-// }
+document.querySelector('.normal').onclick = function(){
+    filterByType('normal');
+}
+function filterByType(pokemonType){
+
+    for (let i=0; i<kantoPokemons.length; i++){
+        if(kantoPokemons[i].pokemonType.toLowerCase() !== pokemonType){
+            const div = document.querySelector(`#pokedex div:nth-of-type(${i+1})`)
+            div.style.display = 'none';
+        }
+    }
+
+
+}
 
