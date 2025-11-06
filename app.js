@@ -98,18 +98,26 @@ function pokemonTypeCheck(name) {
         }
     }
 }
-document.querySelector('.normal').onclick = function(){
-    filterByType('normal');
-}
-function filterByType(pokemonType){
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.grass').onclick = function(){filterByType('grass');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.normal').onclick = function(){filterByType('normal');}
 
+
+function filterByType(pokemonType){
     for (let i=0; i<kantoPokemons.length; i++){
         if(kantoPokemons[i].pokemonType.toLowerCase() !== pokemonType){
             const div = document.querySelector(`#pokedex div:nth-of-type(${i+1})`)
             div.style.display = 'none';
         }
     }
-
-
 }
 
