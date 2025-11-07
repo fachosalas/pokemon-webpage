@@ -100,23 +100,32 @@ function pokemonTypeCheck(name) {
 }
 document.querySelector('.normal').onclick = function(){filterByType('normal');}
 document.querySelector('.grass').onclick = function(){filterByType('grass');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
-document.querySelector('.normal').onclick = function(){filterByType('normal');}
+document.querySelector('.fire').onclick = function(){filterByType('fire');}
+document.querySelector('.water').onclick = function(){filterByType('water');}
+document.querySelector('.bug').onclick = function(){filterByType('bug');}
+document.querySelector('.electric').onclick = function(){filterByType('electric');}
+document.querySelector('.rock').onclick = function(){filterByType('rock');}
+document.querySelector('.ghost').onclick = function(){filterByType('ghost');}
+document.querySelector('.poison').onclick = function(){filterByType('poison');}
+document.querySelector('.psychic').onclick = function(){filterByType('psychic');}
+document.querySelector('.fighting').onclick = function(){filterByType('fighting');}
+document.querySelector('.ground').onclick = function(){filterByType('ground');}
+document.querySelector('.dragon').onclick = function(){filterByType('dragon');}
+document.querySelector('.reset').onclick = function(){filterByType('reset');}
+document.getElementById('showAll').onclick = function(){showAll()};
 
-
+function showAll(){
+    for (let i=0; i<kantoPokemons.length; i++){
+        document.querySelector(`#pokedex div:nth-of-type(${i+1})`).style.display = 'flex';
+    }
+}
 function filterByType(pokemonType){
     for (let i=0; i<kantoPokemons.length; i++){
         if(kantoPokemons[i].pokemonType.toLowerCase() !== pokemonType){
             const div = document.querySelector(`#pokedex div:nth-of-type(${i+1})`)
             div.style.display = 'none';
+        } else{
+            document.querySelector(`#pokedex div:nth-of-type(${i+1})`).style.display = 'flex';
         }
     }
 }
