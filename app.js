@@ -111,8 +111,7 @@ document.querySelector('.psychic').onclick = function(){filterByType('psychic');
 document.querySelector('.fighting').onclick = function(){filterByType('fighting');}
 document.querySelector('.ground').onclick = function(){filterByType('ground');}
 document.querySelector('.dragon').onclick = function(){filterByType('dragon');}
-document.querySelector('.reset').onclick = function(){filterByType('reset');}
-document.getElementById('showAll').onclick = function(){showAll()};
+document.querySelector('.reset').onclick = function(){showAll()}
 
 function showAll(){
     for (let i=0; i<kantoPokemons.length; i++){
@@ -130,3 +129,16 @@ function filterByType(pokemonType){
     }
 }
 
+document.getElementById('searchPokemon').onchange = function(){
+    searchPokemon(document.getElementById('searchPokemon').value)
+}
+
+function searchPokemon(pokemonName){
+    for (let i=0; i<kantoPokemons.length; i++){
+        if (kantoPokemons[i].pokemonName === pokemonName){
+            document.querySelector(`#pokedex div:nth-of-type(${i+1})`).style.display = 'flex';
+        } else{
+            document.querySelector(`#pokedex div:nth-of-type(${i+1})`).style.display = 'none';
+        }
+    }
+}
